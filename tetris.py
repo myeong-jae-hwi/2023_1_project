@@ -3,7 +3,7 @@ import pygame, sys
 
 # The configuration
 cell_size = 38
-cols = 14
+cols = 34
 rows = 22
 maxfps = 30
 

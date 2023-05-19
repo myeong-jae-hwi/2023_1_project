@@ -2,6 +2,8 @@ import pygame
 from pygame.locals import *
 import ctypes
 import tetris
+import slither
+import galaga
 
 pygame.init()
 
@@ -57,8 +59,13 @@ while running:
 
             elif slither_rect.collidepoint(event.pos): # check if mouse is within slither button boundaries
                 print('Slither button clicked!')
+                App = slither.App()
+                App.run()
+
             elif galaga_rect.collidepoint(event.pos):
                 print('Galaga button clicked!')
+                App = galaga.runGame()
+                App.run()
 
         # check for mouse position
         elif event.type == MOUSEMOTION:
