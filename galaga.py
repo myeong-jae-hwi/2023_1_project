@@ -188,5 +188,3 @@ def initGame():
     bullet = pygame.image.load('bullet.png')
     clock = pygame.time.Clock()  # 초당 프레임수를 설정할 수 있는 Clock객체 생성
 
-
-initGame()

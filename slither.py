@@ -186,6 +186,7 @@ def App():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_q:
                     run = False
@@ -197,6 +198,8 @@ def App():
                     player.game_control(EAST)
                 if event.key == pygame.K_LEFT:
                     player.game_control(WEST)
+                if event.key == pygame.K_ESCAPE:
+                    run = False
 
         draw_background(screen)
         player.move_snake(screen)

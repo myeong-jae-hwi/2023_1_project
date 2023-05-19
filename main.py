@@ -64,7 +64,7 @@ while running:
 
             elif galaga_rect.collidepoint(event.pos):
                 print('Galaga button clicked!')
-                App = galaga.runGame()
+                App = galaga.initGame()
                 App.run()
 
         # check for mouse position
