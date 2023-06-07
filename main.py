@@ -3,7 +3,7 @@ from pygame.locals import *
 import ctypes
 import tetris
 import slither
-import galaga
+import Rithomgame
 
 pygame.init()
 
@@ -25,7 +25,7 @@ font = pygame.font.Font('font/a시월구일1.ttf',52)
 # load button images
 Tetris = pygame.image.load('image/tetris.png')
 Slither = pygame.image.load('image/slither.png')
-Galaga = pygame.image.load('image/Galaga.png')
+Galaga = pygame.image.load('image/music.png')
 
 # define button dimensions and positions
 btn_width = Tetris.get_width()
@@ -64,7 +64,7 @@ while running:
 
             elif galaga_rect.collidepoint(event.pos):
                 print('Galaga button clicked!')
-                App = galaga.initGame()
+                App = Rithomgame.Rithomgame_run()
                 App.run()
 
         # check for mouse position
