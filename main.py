@@ -25,7 +25,7 @@ font = pygame.font.Font('font/a시월구일1.ttf',52)
 # load button images
 Tetris = pygame.image.load('image/tetris.png')
 Slither = pygame.image.load('image/slither.png')
-Galaga = pygame.image.load('image/music.png')
+Music = pygame.image.load('image/music.png')
 
 # define button dimensions and positions
 btn_width = Tetris.get_width()
@@ -63,7 +63,7 @@ while running:
                 App.run()
 
             elif galaga_rect.collidepoint(event.pos):
-                print('Galaga button clicked!')
+                print('Music button clicked!')
                 App = Rithomgame.Rithomgame_run()
                 App.run()
 
@@ -103,9 +103,9 @@ while running:
         screen.blit(Slither, slither_rect)
 
     if galaga_active:
-        screen.blit(pygame.transform.scale(Galaga, (btn_width+10, btn_width+10)), (galaga_rect.x-5, galaga_rect.y-5))
+        screen.blit(pygame.transform.scale(Music, (btn_width+10, btn_width+10)), (galaga_rect.x-5, galaga_rect.y-5))
     else:
-        screen.blit(Galaga, galaga_rect)
+        screen.blit(Music, galaga_rect)
 
 
     # render text surface

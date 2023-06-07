@@ -25,7 +25,6 @@ def Rithomgame_run():
 
     current_beat = 0
     pygame.mixer.music.play()
-    clock = pygame.time.Clock()
 
     class Block:
         # 초기값
@@ -50,6 +49,26 @@ def Rithomgame_run():
             if not self.hit and 500 < self.y < 650:
                 if key == 'left' and self.dx < 0:
                     self.hit = True
+                    if 550 < self.y < 650:
+                        return 30
+                    elif 500 < self.y < 550:
+                        return 15
+                elif key == 'mid':
+                    self.hit = True
+                    if 550 < self.y < 650:
+                        return 30
+                    elif 500 < self.y < 550:
+                        return 15
+                elif key == 'right' and self.dx > 0:
+                    self.hit = True
+                    if 550 < self.y < 650:
+                        return 30
+                    elif 500 < self.y < 550:
+                        return 15
+
+            if not self.hit and 450 < self.y < 500:
+                if key == 'left' and self.dx < 0:
+                    self.hit = True
                     return 10
                 elif key == 'mid':
                     self.hit = True
@@ -57,10 +76,6 @@ def Rithomgame_run():
                 elif key == 'right' and self.dx > 0:
                     self.hit = True
                     return 10
-
-                elif not self.hit and self.y > 600:
-                    self.hit = True
-                    return -10
             return 0
 
     def lerp_color(color1, color2, factor):
@@ -180,5 +195,3 @@ def Rithomgame_run():
 
     pygame.quit()
     sys.exit()
-
-
