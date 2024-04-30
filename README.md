@@ -13,6 +13,7 @@
 
 리듬게임
 
+![image](https://github.com/myeong-jae-hwi/2023_1_project/assets/72872676/77e6ab3b-8239-404f-bda0-944dc1b8114d)
 
 영상을 보고싶으시면 블로그에서 확인 가능합니다.
 https://re-hwi.tistory.com/125
